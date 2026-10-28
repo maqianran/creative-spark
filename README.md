@@ -41,7 +41,6 @@ creative-spark/
 ├── README.md
 ├── PROCESS.md
 ├── CREDITS.md
-├── SUBMISSION-PLAN.md
 └── docs/
 ```
 
@@ -77,7 +76,3 @@ Replace these images if they no longer match the version being submitted.
 ## Publishing to GitHub
 
 Create a public repository named `creative-spark`, keep the project files in the repository root, and push your commits. Do not include passwords, API keys, or private information. Submit the public repository URL through Canvas after the final checks.
-
-## Three-day submission plan
-
-See [`SUBMISSION-PLAN.md`](SUBMISSION-PLAN.md) for the staged development and final submission checklist.
