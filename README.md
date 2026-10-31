@@ -1,5 +1,10 @@
 # Creative Spark: Combinatorial Creative Prompt Generator
 
+## 🔗 Live Demo
+**[Click here to try the interactive website!](https://maqianran.github.io/creative-spark/)**
+
+*(Note: If GitHub Pages is still updating, you can also use this [instant HTML preview link](https://htmlpreview.github.io/?https://github.com/maqianran/creative-spark/blob/main/index.html).)*
+
 I created Creative Spark as a bilingual interactive website that helps students and content creators turn a vague idea into a concrete, time-boxed creative challenge. I began the project on **24 October 2026** by brainstorming possible directions for the assignment and choosing the creative prompt generator idea.
 
 ## Project idea
@@ -70,7 +75,8 @@ creative-spark/
 - Example result card: `docs/example-result.png`
 - Narrow/mobile layout: `docs/mobile-screenshot.png`
 
-At the time of the third user trial, I had not yet configured a public live-demo link. I was running the website locally with a static server. I can add a live-demo URL here after I deploy the site and verify that the link is publicly accessible.
+The project is now deployed and publicly accessible via GitHub Pages at: **[https://maqianran.github.io/creative-spark/](https://maqianran.github.io/creative-spark/)**. 
+*(If the GitHub Pages link is temporarily unavailable due to deployment syncing, you can also use this [instant HTML preview link](https://htmlpreview.github.io/?https://github.com/maqianran/creative-spark/blob/main/index.html) to view the website immediately.)*
 
 ## Known limitations
 
@@ -79,7 +85,7 @@ At the time of the third user trial, I had not yet configured a public live-demo
 - I store used-combination history in `sessionStorage` for the current browser tab. It normally survives a page reload in the same tab and clears when the tab session ends. If browser storage is unavailable, repeat prevention falls back to in-memory storage until the page is reloaded.
 - I show eight style keywords at a time rather than placing all 100 on the page simultaneously.
 - Clipboard behaviour depends on browser permissions and the runtime environment. I provide a fallback message if copying is blocked.
-- During my user trials, the website was accessed through a local server started from Terminal. I had not yet published a direct public link at that point.
+- During my initial user trials, the website was accessed through a local server started from Terminal. Based on user feedback about this inconvenience, the project has since been deployed to GitHub Pages and is publicly accessible.
 
 ## Testing checklist
 
