@@ -40,6 +40,8 @@ A third friend tried the final version on **30 October 2026**. They praised the 
 
 The friend did point out that accessing the website was somewhat inconvenient at that stage. I was still asking people to open the project folder, start the local server through Terminal, and then open the local address in a browser. I explained that I had not prepared a direct public link because I was still finishing the website. I kept the interaction design unchanged because the friend did not identify another problem with the interface or the generated content. I noted that publishing a direct link would make the experience easier to share and access, without requiring a change to the core prompt generator.
 
+In response to this feedback, I configured GitHub Pages to deploy the project. Users can now access the experience directly via a live URL without needing to start a local server.
+
 ## 3. User-trial record
 
 I asked three friends to try different versions of Creative Spark. All three used their own Mac computers. The first two used **Safari**, and the third used **Google Chrome**. I retained the dates, devices, browsers, and main feedback described below. I did not keep a detailed click-by-click observation sheet or exact quotations, so I have not invented specific button sequences or points where a friend paused.
