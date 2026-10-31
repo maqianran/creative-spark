@@ -142,3 +142,46 @@ h1, h2, h3, p { margin-top: 0; }
 
 .reset-link { display: block; margin: 12px auto 0; padding: 5px 8px; color: #77796f; background: transparent; border: 0; text-decoration: underline; text-decoration-color: #c9c2b3; text-underline-offset: 3px; font-size: 10px; cursor: pointer; }
 .reset-link:hover { color: var(--blue); }
+
+/* Iteration 2: bilingual language switch and a roomier mood library. */
+.header-actions { display: flex; align-items: center; gap: 16px; }
+.language-toggle { flex: 0 0 auto; min-width: 62px; min-height: 34px; padding: 0 11px; border: 1px solid var(--blue); background: transparent; color: var(--blue); font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: .4px; cursor: pointer; transition: background .16s, color .16s, transform .16s; }
+.language-toggle:hover { background: var(--blue); color: white; transform: translateY(-1px); }
+.language-toggle:active { transform: translateY(0); }
+.mood-count { margin: 10px 0 0; color: #929184; font-size: 9px; }
+.mood-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.mood-option { white-space: nowrap; padding: 8px 10px; }
+.mood-dot { flex: 0 0 8px; }
+.mood-retro { background: #d17a52; }
+.mood-soft { background: #88a88d; }
+.mood-mystery { background: #6f70bd; }
+.mood-cinematic { background: #486b9e; }
+.mood-playful { background: #ed9c45; }
+.mood-dreamy { background: #bc8ac9; }
+.mood-minimal { background: #8a9298; }
+.mood-bold { background: #e95b62; }
+.mood-nature { background: #638d59; }
+
+html[lang="en"] .intro h1 { max-width: 720px; }
+html[lang="en"] .intro-copy { max-width: 720px; }
+html[lang="en"] .choice-group legend { line-height: 1.5; }
+html[lang="en"] .result-card h2 { letter-spacing: -.7px; }
+
+@media (max-width: 700px) {
+  .header-actions { gap: 9px; }
+  .top-note { display: none; }
+  .language-toggle { min-width: 58px; min-height: 32px; }
+  .mood-option { font-size: 10px; padding: 8px 10px; }
+  html[lang="en"] .intro h1 { font-size: clamp(43px, 10.8vw, 59px); letter-spacing: -2.5px; }
+}
+
+
+/* Iteration 3: rotating art-style keywords and combinatorial prompts. */
+.mood-tools { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.mood-tools .mood-count { margin: 0; line-height: 1.6; }
+.refresh-styles { flex: 0 0 auto; border: 1px solid #d1cbbc; border-radius: 20px; padding: 7px 10px; background: #fffdf8; color: var(--blue); font-size: 10px; font-weight: 700; cursor: pointer; transition: background .16s, border-color .16s, transform .16s; }
+.refresh-styles:hover { background: #eef1ff; border-color: var(--blue); transform: translateY(-1px); }
+.refresh-styles:focus-visible, .mood-option:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.mood-swatch-0 { background: #d17a52; }.mood-swatch-1 { background: #88a88d; }.mood-swatch-2 { background: #6f70bd; }.mood-swatch-3 { background: #486b9e; }.mood-swatch-4 { background: #ed9c45; }.mood-swatch-5 { background: #bc8ac9; }.mood-swatch-6 { background: #8a9298; }.mood-swatch-7 { background: #e95b62; }.mood-swatch-8 { background: #638d59; }.mood-swatch-9 { background: #4f8c91; }
+.result-description { white-space: normal; }
+@media (max-width: 700px) { .mood-tools { align-items: flex-start; } .refresh-styles { font-size: 9px; } }

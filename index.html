@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f4ec">
-  <meta name="description" content="Creative Spark 是一个帮助你快速找到短视频、摄影和海报创作灵感的小工具。">
+  <meta name="description" content="Creative Spark 是一个帮助你快速找到创作灵感的中英双语互动工具。">
   <title>Creative Spark · 创作灵感抽卡机</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -12,104 +12,105 @@
 <body>
   <div class="page-shell">
     <header class="topbar">
-      <a class="brand" href="#top" aria-label="Creative Spark 首页">
+      <a class="brand" href="#top" aria-label="Creative Spark 首页" data-i18n-aria="brandAria">
         <span class="brand-mark" aria-hidden="true">✳</span>
         <span>creative<span class="brand-light">spark</span></span>
       </a>
-      <div class="top-note"><span class="status-dot"></span> THE LITTLE PROMPT LAB <span class="top-index">NO. 001</span></div>
+      <div class="header-actions">
+        <div class="top-note"><span class="status-dot"></span><span data-i18n="topNote">灵感小实验室</span><span class="top-index">NO. 001</span></div>
+        <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch to English" data-i18n-aria="languageToggleAria">EN ↗</button>
+      </div>
     </header>
 
     <main id="top">
       <section class="intro" aria-labelledby="page-title">
-        <div class="eyebrow"><span class="eyebrow-line"></span> A LITTLE SPARK FOR YOUR NEXT IDEA</div>
-        <h1 id="page-title">灵感不必等。<br><span class="title-accent">先抽一张。</span></h1>
-        <p class="intro-copy">选好创作方向、情绪和时间。剩下的交给一点点随机性。<br class="desktop-break">从一个小任务开始，让想法真正落地。</p>
+        <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">给下一个点子添一点火花</span></div>
+        <h1 id="page-title"><span data-i18n="heroLine1">灵感不必等。</span><br><span class="title-accent" data-i18n="heroLine2">先抽一张。</span></h1>
+        <p class="intro-copy" data-i18n-html="introCopy">选好创作方向、氛围和时间。剩下的交给一点点随机性。<br class="desktop-break">从一个小任务开始，让想法真正落地。</p>
         <div class="intro-stamp" aria-hidden="true"><span>MAKE</span><span>IT</span><span>HAPPEN ↗</span></div>
       </section>
 
-      <section class="workbench" aria-label="创作灵感生成器">
+      <section class="workbench" aria-label="创作灵感生成器" data-i18n-aria="workbenchAria">
         <div class="controls-panel">
           <div class="panel-heading">
-            <div><span class="section-kicker">01 / SET YOUR INTENTION</span><h2>先选一选</h2></div>
-            <span class="step-pill">3 STEPS</span>
+            <div><span class="section-kicker" data-i18n="stepLabel">01 / 设定你的方向</span><h2 data-i18n="chooseTitle">先选一选</h2></div>
+            <span class="step-pill" data-i18n="stepCount">3 个步骤</span>
           </div>
           <form id="prompt-form" novalidate>
             <fieldset class="choice-group" data-group="format">
-              <legend><span class="legend-number">A</span> 今天想创作什么？ <span class="required-mark">必选</span></legend>
+              <legend><span class="legend-number">A</span><span data-i18n="formatQuestion">今天想创作什么？</span><span class="required-mark" data-i18n="required">必选</span></legend>
               <div class="format-options">
                 <button class="format-option" type="button" data-value="video" aria-pressed="false">
-                  <span class="option-icon" aria-hidden="true">▶</span><span class="option-name">短视频</span><span class="option-sub">SHORT VIDEO</span>
+                  <span class="option-icon" aria-hidden="true">▶</span><span class="option-name" data-i18n="formatVideo">短视频</span><span class="option-sub" data-i18n="formatVideoSub">SHORT VIDEO</span>
                 </button>
                 <button class="format-option" type="button" data-value="photo" aria-pressed="false">
-                  <span class="option-icon camera-icon" aria-hidden="true">▧</span><span class="option-name">摄影</span><span class="option-sub">PHOTOGRAPHY</span>
+                  <span class="option-icon camera-icon" aria-hidden="true">▧</span><span class="option-name" data-i18n="formatPhoto">摄影</span><span class="option-sub" data-i18n="formatPhotoSub">PHOTOGRAPHY</span>
                 </button>
                 <button class="format-option" type="button" data-value="poster" aria-pressed="false">
-                  <span class="option-icon poster-icon" aria-hidden="true">▤</span><span class="option-name">海报设计</span><span class="option-sub">POSTER DESIGN</span>
+                  <span class="option-icon poster-icon" aria-hidden="true">▤</span><span class="option-name" data-i18n="formatPoster">海报设计</span><span class="option-sub" data-i18n="formatPosterSub">POSTER DESIGN</span>
                 </button>
               </div>
             </fieldset>
 
             <fieldset class="choice-group" data-group="mood">
-              <legend><span class="legend-number">B</span> 想要哪种氛围？ <span class="required-mark">必选</span></legend>
-              <div class="pill-options">
-                <button class="mood-option" type="button" data-value="retro" aria-pressed="false"><span class="mood-dot mood-retro"></span>复古感</button>
-                <button class="mood-option" type="button" data-value="soft" aria-pressed="false"><span class="mood-dot mood-soft"></span>治愈系</button>
-                <button class="mood-option" type="button" data-value="mystery" aria-pressed="false"><span class="mood-dot mood-mystery"></span>悬疑感</button>
-              </div>
+              <legend><span class="legend-number">B</span><span data-i18n="moodQuestion">想要哪种氛围？</span><span class="required-mark" data-i18n="required">必选</span></legend>
+              <div class="pill-options" id="mood-options"></div>
+              <div class="mood-tools"><p class="mood-count" id="mood-count" data-i18n="moodCount">100 个艺术风格关键词 · 每次展示 8 个</p><button class="refresh-styles" id="refresh-styles-button" type="button" data-i18n="styleRefreshButton">换一组风格 ↻</button></div>
             </fieldset>
 
             <fieldset class="choice-group time-group" data-group="time">
-              <legend><span class="legend-number">C</span> 给自己多少时间？ <span class="required-mark">必选</span></legend>
+              <legend><span class="legend-number">C</span><span data-i18n="timeQuestion">给自己多少时间？</span><span class="required-mark" data-i18n="required">必选</span></legend>
               <div class="time-options">
-                <button class="time-option" type="button" data-value="5" aria-pressed="false"><strong>05</strong><span>分钟</span></button>
-                <button class="time-option" type="button" data-value="15" aria-pressed="false"><strong>15</strong><span>分钟</span></button>
-                <button class="time-option" type="button" data-value="30" aria-pressed="false"><strong>30</strong><span>分钟</span></button>
+                <button class="time-option" type="button" data-value="5" aria-pressed="false"><strong>05</strong><span data-i18n="minuteUnit">分钟</span></button>
+                <button class="time-option" type="button" data-value="15" aria-pressed="false"><strong>15</strong><span data-i18n="minuteUnit">分钟</span></button>
+                <button class="time-option" type="button" data-value="30" aria-pressed="false"><strong>30</strong><span data-i18n="minuteUnit">分钟</span></button>
               </div>
             </fieldset>
 
             <p id="form-message" class="form-message" role="alert" aria-live="polite"></p>
-            <button class="primary-button" id="draw-button" type="submit"><span>生成我的创作任务</span><span class="button-arrow" aria-hidden="true">↗</span></button>
-            <p class="form-footnote"><span aria-hidden="true">✳</span> 没有标准答案，只有下一步。</p>
+            <button class="primary-button" id="draw-button" type="submit"><span data-i18n="drawButton">生成我的创作任务</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            <p class="form-footnote"><span aria-hidden="true">✳</span> <span data-i18n="footnote">没有标准答案，只有下一步。</span></p>
+            <button class="reset-link" id="reset-button" type="button" data-i18n="resetButton">清空选择，重新开始 ↺</button>
           </form>
         </div>
 
-        <div class="result-panel" aria-live="polite" aria-label="创作任务结果">
-          <div class="result-topline"><span class="section-kicker">02 / YOUR NEXT MISSION</span><span class="result-number" id="result-number">CARD —</span></div>
+        <div class="result-panel" aria-live="polite" aria-label="创作任务结果" data-i18n-aria="resultAria">
+          <div class="result-topline"><span class="section-kicker" data-i18n="resultKicker">02 / 你的下一项任务</span><span class="result-number" id="result-number">卡片 —</span></div>
           <div id="empty-state" class="empty-state">
             <div class="spark-orbit" aria-hidden="true"><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span><span class="orbit-core">✳</span><span class="orbit-star star-one">✦</span><span class="orbit-star star-two">✧</span></div>
-            <p class="empty-overline">YOUR IDEA IS LOADING...</p>
-            <h2>一张空白卡片，<br>等你来点亮。</h2>
-            <p class="empty-copy">完成左边三个选择，<br>这里就会出现你的专属创作挑战。</p>
-            <div class="empty-tags"><span>NO PRESSURE</span><span>JUST MAKE</span></div>
+            <p class="empty-overline" data-i18n="emptyOverline">你的灵感正在加载……</p>
+            <h2 data-i18n-html="emptyTitle">一张空白卡片，<br>等你来点亮。</h2>
+            <p class="empty-copy" data-i18n-html="emptyCopy">完成左边三个选择，<br>这里就会出现你的专属创作挑战。</p>
+            <div class="empty-tags"><span data-i18n="emptyTagOne">NO PRESSURE</span><span data-i18n="emptyTagTwo">JUST MAKE</span></div>
           </div>
           <article id="result-card" class="result-card" hidden>
             <div class="result-card-meta"><span id="result-format" class="meta-chip">短视频</span><span id="result-mood" class="meta-mood">复古感</span></div>
-            <p class="mission-label">YOUR CREATIVE PROMPT</p>
+            <p class="mission-label" data-i18n="missionLabel">你的创作提示</p>
             <h2 id="result-title">让日常变得特别。</h2>
             <p id="result-description" class="result-description"></p>
-            <div class="challenge-box"><span class="challenge-icon" aria-hidden="true">◷</span><div><span class="challenge-label">YOUR TIME LIMIT</span><strong id="result-time">15 分钟</strong></div><span class="challenge-side-note">START SMALL<br>FINISH SOMETHING</span></div>
-            <p id="result-tip" class="result-tip"><span aria-hidden="true">✳</span> <span></span></p>
+            <div class="challenge-box"><span class="challenge-icon" aria-hidden="true">◷</span><div><span class="challenge-label" data-i18n="timeLimitLabel">本次时间限制</span><strong id="result-time">15 分钟</strong></div><span class="challenge-side-note" data-i18n-html="challengeSideNote">从小处开始<br>完成一个作品</span></div>
+            <p id="result-tip" class="result-tip"><span aria-hidden="true">✳</span><span></span></p>
             <div class="result-actions">
-              <button id="copy-button" class="secondary-button" type="button"><span aria-hidden="true">▢</span> 复制任务</button>
-              <button id="redraw-button" class="primary-button redraw-button" type="button"><span>再抽一张</span><span class="button-arrow" aria-hidden="true">↻</span></button>
+              <button id="copy-button" class="secondary-button" type="button"><span aria-hidden="true">▢</span><span data-i18n="copyButton">复制任务</span></button>
+              <button id="redraw-button" class="primary-button redraw-button" type="button"><span data-i18n="redrawButton">再抽一张</span><span class="button-arrow" aria-hidden="true">↻</span></button>
             </div>
             <p id="copy-message" class="copy-message" role="status" aria-live="polite"></p>
           </article>
-          <div class="result-footer"><span>CREATIVITY, BY YOU.</span><span>CS / 001</span></div>
+          <div class="result-footer"><span data-i18n="resultFooterLeft">CREATIVITY, BY YOU.</span><span>CS / 001</span></div>
         </div>
       </section>
 
       <section class="how-it-works" aria-labelledby="how-title">
-        <div class="how-heading"><span class="section-kicker">A SMALL LOOP, A REAL RESULT</span><h2 id="how-title">三步，把灵感变成行动。</h2></div>
+        <div class="how-heading"><span class="section-kicker" data-i18n="howKicker">一个小循环，一个真实成果</span><h2 id="how-title" data-i18n="howTitle">三步，把灵感变成行动。</h2></div>
         <div class="how-grid">
-          <article class="how-card"><span class="how-number">01</span><div class="how-icon" aria-hidden="true">⌘</div><h3>选定方向</h3><p>告诉小工具你想做什么、喜欢什么氛围，以及你有多少时间。</p></article>
-          <article class="how-card"><span class="how-number">02</span><div class="how-icon draw-icon" aria-hidden="true">✳</div><h3>抽取任务</h3><p>程序根据你的组合，从预设任务库里挑选一条挑战。</p></article>
-          <article class="how-card"><span class="how-number">03</span><div class="how-icon make-icon" aria-hidden="true">↗</div><h3>动手创作</h3><p>复制任务，开始你的限时小实验。完成比等待完美更重要。</p></article>
+          <article class="how-card"><span class="how-number">01</span><div class="how-icon" aria-hidden="true">⌘</div><h3 data-i18n="howStepOneTitle">选定方向</h3><p data-i18n="howStepOneCopy">告诉小工具你想做什么、喜欢什么氛围，以及你有多少时间。</p></article>
+          <article class="how-card"><span class="how-number">02</span><div class="how-icon draw-icon" aria-hidden="true">✳</div><h3 data-i18n="howStepTwoTitle">抽取任务</h3><p data-i18n="howStepTwoCopy">程序把风格、主题、视觉手法和限制条件组合成一条新挑战。</p></article>
+          <article class="how-card"><span class="how-number">03</span><div class="how-icon make-icon" aria-hidden="true">↗</div><h3 data-i18n="howStepThreeTitle">动手创作</h3><p data-i18n="howStepThreeCopy">复制任务，开始你的限时小实验。完成比等待完美更重要。</p></article>
         </div>
       </section>
     </main>
 
-    <footer class="footer"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">✳</span><span>creative<span class="brand-light">spark</span></span></a><p>MADE FOR THE MOMENT BEFORE YOU BEGIN.</p><p class="footer-right">A LITTLE IDEA CAN GO A LONG WAY <span aria-hidden="true">↗</span></p></footer>
+    <footer class="footer"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">✳</span><span>creative<span class="brand-light">spark</span></span></a><p data-i18n="footerCenter">为开始之前的那个瞬间而做。</p><p class="footer-right" data-i18n-html="footerRight">一个小点子，也能走很远 <span aria-hidden="true">↗</span></p></footer>
   </div>
 </body>
 </html>
